@@ -4,7 +4,7 @@
     <img width="20%" src="https://avatars.githubusercontent.com/u/54933878?s=400&u=31132eb8a567528f005143a0d339174848a06df8&v=4" alt="scubamuc">
 </p>
 
-I'm no developer myself and any real developer would laugh at my scripts calling me an amateur. 
+I'm not a developer and any real developer would probably laugh at my scripts calling me an amateur. 
 While this is absolutely true, I understand what I'm doing and my scripts do what I expect them to do. 
 
 So use the scripts at own risk. Adapt them to your needs if you like.
