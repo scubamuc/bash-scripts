@@ -1,7 +1,8 @@
   #!/bin/bash
 ### Restart Nextcloud cron if it failed ###
 ### 'sudo snap restart nextcloud.nextcloud-cron' ###
-### create cronjob as root to run every 15 min ###
+### create cronjob as root to run every 30 min ###
+### */30 * * * * /bin/nc-restart-cron.sh ###
 
 SERVICE=cron.php
 
