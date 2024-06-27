@@ -7,7 +7,7 @@
 I'm not a developer and any real developer would probably laugh at my scripts calling me an amateur. 
 While this is absolutely true, I understand what I'm doing and my scripts do what I expect them to do. 
 
-So use the scripts at own risk. Adapt them to your needs if you like.
+So use the scripts **at own risk**. Adapt them to your needs if you like, but be careful and double check!
 
 Notice how almost every line is commented? 
 That's because I like to know what is happening and if I don't write it down I'm bound to forget! 
