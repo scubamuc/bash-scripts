@@ -14,8 +14,8 @@
 LOG="/home/$USER/script.log"  ## Log file
 DATUM=`date +"%F"` ## Date format
 ZEIT=`date +"%T"`  ## Time format
-ZIEL="/home/$USER/Pfad"  ## Targe path
-QUELLE="/home/$USER/Pfad" ## Source path
+ZIEL="/home/$USER/path"  ## Target path
+QUELLE="/home/$USER/path" ## Source path
 LAN=$(ls /sys/class/net | grep en) ## Eternet Interface
 WLAN=$(ls /sys/class/net | grep wl) ## Wireless Interface
 EXTIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
@@ -66,9 +66,9 @@ echo ''
 echo '=========================================   '
 echo '       System information!                       '
 echo ''
-	echo     "      |     Host:   ""$HOSTNAME"; ## Hostname des Systems
-	echo     "      |     Date:   ""$DATUM"; ## aktuelles Systemdatum
-	echo     "      |     Time:   ""$ZEIT" ; ## aktuelle Systemzeit
+	echo     "      |     Host:   ""$HOSTNAME"; ## Hostname System
+	echo     "      |     Date:   ""$DATUM"; ## System date
+	echo     "      |     Time:   ""$ZEIT" ; ## System time
 	echo -ne "      |   LAN-IP:   "; hostname -I ; ## LAN IP
 	echo -ne "      |  WLAN-IP:   "; ip -4 addr show $WLAN | grep -oP '(?<=inet\s)\d+(\.\d+){3}' ; ## WLAN-IP
 	echo -ne "      |   EXT-IP:   "; "$EXTIP" ## external IP
