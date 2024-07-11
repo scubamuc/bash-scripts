@@ -38,11 +38,11 @@ timestamp()
  echo "********************************************************" >> "$LOG" ; ## log seperator
  echo "$(timestamp) -- Snapbackup "$SNAPNAME" Start" >> "$LOG" ; ## start log
 
-## stop snap for snapshot  
+## optional stop snap for snapshot  
  sudo snap stop "$SNAPNAME" ;
 ## create snap snapshot 
  sudo snap save --abs-time "$SNAPNAME" ;
-## restart snap after snapshot 
+## optional if stopped restart snap after snapshot 
  sudo snap start "$SNAPNAME" ;
 
 ## find and move snapshot to $TARGET  
