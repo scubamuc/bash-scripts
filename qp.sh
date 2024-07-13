@@ -1,7 +1,8 @@
   #!/bin/bash
 ##############################################################
-# Script -scubamuc- https://scubamuc.github.io/ 
-# Beschreibung -- Quick Ping & Speed Test --
+# Script description  -scubamuc- https://scubamuc.github.io/ #
+##############################################################
+# - Beschreibung -- Quick Ping & Speed Test --
 # - Voraussetzung 'sudo apt install speedtest-cli'
 # - Siehe Variablen
 # - 'notify-send' nur für Desktop Systeme, bei CLI-Nutzung
