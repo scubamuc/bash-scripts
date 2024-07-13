@@ -1,7 +1,6 @@
 #!/bin/bash
 ##############################################################
-## -- SCUBA --
-## Script -scubamuc- https://scubamuc.github.io/ 
+# Script description  -scubamuc- https://scubamuc.github.io/ #
 ##############################################################
 # change host name
 # current host name is $hostn
