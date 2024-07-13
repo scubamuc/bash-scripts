@@ -1,8 +1,7 @@
   #!/bin/bash
 ##############################################################
-## -- SCUBA --
-## LXC container incremental backup image to target directory
-## Script -scubamuc- https://scubamuc.github.io/ 
+# Script description  -scubamuc- https://scubamuc.github.io/ #
+# LXC container incremental backup image to target directory #
 ##############################################################
 ## create target directory
 ## create crontab for automation
