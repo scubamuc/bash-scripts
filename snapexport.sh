@@ -1,7 +1,7 @@
 #!/bin/bash
 ##############################################################
 # -scubamuc- https://scubamuc.github.io/                     #
-# Nextcloud-snap backup with nextcloud.export -- SCUBA --    #
+# Nextcloud-snap backup with nextcloud.export                #
 ##############################################################
 
 ## backup directory: '/var/snap/nextcloud/common/backups'
