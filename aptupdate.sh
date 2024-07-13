@@ -1,7 +1,6 @@
   #!/bin/bash
 ##############################################################
-## -- SCUBA --
-## Script -scubamuc- https://scubamuc.github.io/ 
+# Script description  -scubamuc- https://scubamuc.github.io/ #
 ##############################################################
 echo '#############################################################'
 echo '#            Hallo '$USER'! Update & Upgrade                #'
