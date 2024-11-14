@@ -12,12 +12,12 @@
 # VARIABLES #
 ##############################################################
 LOG="/home/$USER/script.log"  ## Log file
-DATUM=`date +"%F"` ## Date format
-ZEIT=`date +"%T"`  ## Time format
-ZIEL="/home/$USER/path"  ## Target path
-QUELLE="/home/$USER/path" ## Source path
+DATE=`date +"%F"` ## Date format
+TIME=`date +"%T"`  ## Time format
+TARGET="/home/$USER/path"  ## Target path
+SOURCE="/home/$USER/path" ## Source path
 LAN=$(ls /sys/class/net | grep en) ## Eternet Interface
-WLAN=$(ls /sys/class/net | grep wl) ## Wireless Interface
+WIFI=$(ls /sys/class/net | grep wl) ## Wireless Interface
 EXTIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 ##############################################################
 # FUNCTIONS #
@@ -67,10 +67,10 @@ echo '=========================================   '
 echo '       System information!                       '
 echo ''
 	echo     "      |     Host:   ""$HOSTNAME"; ## Hostname System
-	echo     "      |     Date:   ""$DATUM"; ## System date
-	echo     "      |     Time:   ""$ZEIT" ; ## System time
+	echo     "      |     Date:   ""$DATE"; ## System date
+	echo     "      |     Time:   ""$TIME" ; ## System time
 	echo -ne "      |   LAN-IP:   "; hostname -I ; ## LAN IP
-	echo -ne "      |  WLAN-IP:   "; ip -4 addr show $WLAN | grep -oP '(?<=inet\s)\d+(\.\d+){3}' ; ## WLAN-IP
+	echo -ne "      |  WLAN-IP:   "; ip -4 addr show $WIFI | grep -oP '(?<=inet\s)\d+(\.\d+){3}' ; ## WLAN-IP
 	echo -ne "      |   EXT-IP:   "; "$EXTIP" ## external IP
 echo ''
 echo '-------------------------------------------------'
