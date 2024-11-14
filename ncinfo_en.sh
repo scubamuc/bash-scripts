@@ -13,12 +13,12 @@
 # VARIABLES #
 ##############################################################
 LOG="/home/$USER/script.log"  ## Log file
-DATUM=`date +"%F"` ## Date format
-ZEIT=`date +"%T"`  ## Time format
-ZIEL="/home/$USER/Pfad"  ## Target path
-QUELLE="/home/$USER/Pfad" ## Source path
+DATE=`date +"%F"` ## Date format
+TIME=`date +"%T"`  ## Time format
+TARGET="/home/$USER/Pfad"  ## Target path
+SOURCE="/home/$USER/Pfad" ## Source path
 LAN=$(ls /sys/class/net | grep 'br0') ## Eternet Interface
-WLAN=$(ls /sys/class/net | grep 'wlx') ## Wireless Interface
+WIFI=$(ls /sys/class/net | grep 'wlx') ## Wireless Interface
 EXTIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 ##############################################################
 # FUNCTIONS #
@@ -53,8 +53,8 @@ echo '=========================================   '
 echo '       System information!                       '
 echo ''
 	echo     "	      Host: "$HOSTNAME ;
-	echo     "	      Date: "$DATUM ;
-	echo     "	      Time: "$ZEIT  ;
+	echo     "	      Date: "$DATE ;
+	echo     "	      Time: "$TIME  ;
   	echo -ne "	    LAN-IP: "; hostname -I ;
 	echo -ne "	    EXT-IP: "$EXTIP ;
 echo ''
