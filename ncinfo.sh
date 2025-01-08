@@ -25,9 +25,8 @@ IPLAN=hostname -I ## zeigt lokale LAN IP
 ## Check ob neustart notwendig ##
 CheckReboot()
 	{
-	sudo /usr/lib/update-notifier/update-motd-reboot-required 
+	[ -f /var/run/reboot-required ] && echo "Reboot required" || echo "No reboot needed"
 	}
-
 
 ## Check ob Updates verfügbar ##
 CheckUpdates()
