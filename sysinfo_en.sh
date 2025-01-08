@@ -25,7 +25,7 @@ EXTIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
 ## Check if reboot is required ##
 CheckReboot()
         {
-                sudo /usr/lib/update-notifier/update-motd-reboot-required
+        	[ -f /var/run/reboot-required ] && echo "Reboot required" || echo "No reboot needed"
         }
 
 
