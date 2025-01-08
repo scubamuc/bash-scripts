@@ -70,9 +70,9 @@ echo ''
 	echo -ne "	System Läuft seit:	"; uptime -p ; #check wie lange läuft System schon
 	echo -ne "	 Letzter Neustart:	"; last reboot -F | head -1 | awk '{print $5,$6,$7,$8,$9}' ; #check letzter neustart
 	echo -ne "	  System Neustart?	"; pro system reboot-required ; #prüfe nach ob reboot erforderlich ist
+        echo -ne "         Current CPU load:      "; mpstat
 echo ''
-echo ''
-sar -u 1 2
+## sar -p | tail -1
 echo ''
 echo '-------------------------------------------------'
 echo '-------------------------------------------------'
