@@ -25,7 +25,7 @@ IPLAN=hostname -I ## zeigt lokale LAN IP
 ## Check ob neustart notwendig ##
 CheckReboot()
 	{
-	[ -f /var/run/reboot-required ] && echo "Reboot required" || echo "No reboot needed"
+	[ -f /var/run/reboot-required ] && echo "Neustart erforderlich" || echo "Nicht erforderich"
 	}
 
 ## Check ob Updates verfügbar ##
@@ -69,7 +69,7 @@ echo ''
 	echo -ne "	    X11VNC Server:	"; ps -C x11vnc >/dev/null && echo "läuft!" || echo "gestoppt!"
 	echo -ne "	System Läuft seit:	"; uptime -p ; #check wie lange läuft System schon
 	echo -ne "	 Letzter Neustart:	"; last reboot -F | head -1 | awk '{print $5,$6,$7,$8,$9}' ; #check letzter neustart
-	echo -ne "	  System Neustart?	"; pro system reboot-required ; #prüfe nach ob reboot erforderlich ist
+	echo -ne "	  System Neustart?	"; pro system reboot-required ; #prüfe nach ob Neustart erforderlich ist
         echo -ne "         Current CPU load:      "; mpstat
 echo ''
 ## sar -p | tail -1
