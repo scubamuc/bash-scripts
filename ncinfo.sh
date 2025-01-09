@@ -67,7 +67,7 @@ echo ''
 	echo -ne "	   Nextcloud Cron:	"; snap services nextcloud.nextcloud-cron | grep -oPw 'active' >/dev/null && echo "läuft!" || echo "gestoppt!"
 	echo -ne "	System Läuft seit:	"; uptime -p ; #check wie lange läuft System schon
 	echo -ne "	 Letzter Neustart:	"; last reboot -F | head -1 | awk '{print $5,$6,$7,$8,$9}' ; #check letzter neustart
-	echo -ne "	  System Neustart?	"; pro system reboot-required ; #prüfe nach ob Neustart erforderlich ist
+	echo -ne "	  System Neustart?	"; CheckReboot ; #prüfe nach ob Neustart erforderlich ist
         echo -ne "         Current CPU load:      "; mpstat
 echo ''
 ## sar -p | tail -1
