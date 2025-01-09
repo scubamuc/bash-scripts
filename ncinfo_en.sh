@@ -70,7 +70,7 @@ echo ''
 	echo -ne "	  Reboot required?	"; CheckReboot; #check reboot required
 ##	echo -ne "        Current CPU load:      "; mpstat
 echo ''
-## sar -p | tail -1
+## sar -p | tail -1; #average CPU load since last boot, last 24 hours
 echo ''
 echo '-------------------------------------------------'
 echo '       Snap version installed!                   '
