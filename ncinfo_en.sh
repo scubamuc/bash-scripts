@@ -73,11 +73,16 @@ echo ''
 ## sar -p | tail -1
 echo ''
 echo '-------------------------------------------------'
-echo '-------------------------------------------------'
 echo '       Snap version installed!                   '
 echo ''
-	echo	"	-- Current Snap version: "
-	snap version 	# list Snap information
+        echo    "       -- Current Snap version: "
+        snap version    # list Snap information
+echo ''
+        echo    "       -- Nextcloud Snap revisions -- "
+        snap list nextcloud --all # Listet Nextcloud Info's
+echo ''
+        echo    "       -- Nextcloud Snap Services -- "
+        sudo snap services nextcloud #Listet Nextcloud Dienste
 echo ''
 echo '       ==================================   '
 	read -p "  Enter to continue... Crtl+c to close..."
