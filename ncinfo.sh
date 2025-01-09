@@ -79,12 +79,12 @@ echo ''
 	echo	"	-- Aktuelle Snap Version: "
 	snap version # Listet Snap Info's
 echo ''
-##	echo 	"	-- Aktuelle Nextcloud Snap: "
-##	snap list nextcloud --all # Listet Nextcloud Info's
-## echo ''
-## 	echo	"	-- Nextcloud Snap Dienste:"
-## 	echo	"				"; sudo snap services nextcloud #Listet Nextcloud Dienste
-## echo ''
+	echo 	"	-- Aktuelle Nextcloud Snap: "
+	snap list nextcloud --all # Listet Nextcloud Info's
+ echo ''
+ 	echo	"	-- Nextcloud Snap Dienste:"
+ 	echo	"				"; sudo snap services nextcloud #Listet Nextcloud Dienste
+ echo ''
 echo '       ==================================   '
 read -p "  weiter mit Enter... Strg+c für Ende..."
 echo ''
