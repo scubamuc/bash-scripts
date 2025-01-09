@@ -68,7 +68,7 @@ echo ''
 	echo -ne "	  System up since:	"; uptime -p ; #check uptime
 	echo -ne "	 	Last boot:	"; last reboot -F | head -1 | awk '{print $5,$6,$7,$8,$9}' ; #check last boot
 	echo -ne "	  Reboot required?	"; CheckReboot; #check reboot required
-        echo -ne "        Current CPU load:      "; mpstat
+##	echo -ne "        Current CPU load:      "; mpstat
 echo ''
 ## sar -p | tail -1
 echo ''
