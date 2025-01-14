@@ -43,7 +43,7 @@ do
 done
 
 ## find and move compressed backup file to $TARGET
-sudo find $SOURCE/ -name "*.tar.gz" -exec mv '{}' $TARGET/ \;
+sudo find $SOURCE/ -maxdepth 1 -name "*.tar.gz" -exec mv {} $TARGET/ \;
 
 ## find and rotate/delete old backups
 sudo find $TARGET/ -name "*.tar.gz" -mtime +$RETENTION -exec rm -f {} \; 
