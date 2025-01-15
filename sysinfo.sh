@@ -17,7 +17,7 @@ ZIEL="/home/$USER/Pfad"  ## Zieldatei
 QUELLE="/home/$USER/Pfad" ## Quelldatei
 LAN=$(ls /sys/class/net | grep -oP 'br0') ## Eternet Interface
 WLAN=$(ls /sys/class/net | grep wl) ## Wireless Interface
-EXTIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+EXTIP=$(curl ifconfig.me) ## External IP
 ##############################################################
 # FUNKTION #
 ##############################################################
