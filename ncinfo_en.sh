@@ -19,7 +19,7 @@ TARGET="/home/$USER/path"  ## Target path
 SOURCE="/home/$USER/path" ## Source path
 LAN=$(ls /sys/class/net | grep 'br0') ## Eternet Interface
 WIFI=$(ls /sys/class/net | grep 'wlx') ## Wireless Interface
-EXTIP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+EXTIP=$(curl ifconfig.me)
 ##############################################################
 # FUNCTIONS #
 ##############################################################
