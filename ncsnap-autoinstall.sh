@@ -14,7 +14,6 @@ RPROXYIP="192.168.2.xxx"
 NCLANGUAGE="en"
 NCLOCALE="en"
 NCREGION="GB"
-
 ##############################################################
 # remove existing Nextcloud snap
 	sudo snap remove nextcloud ;
@@ -51,7 +50,7 @@ NCREGION="GB"
 	sudo nextcloud.occ config:system:set overwriteprotocol --value="https" ;
 # set mail address in user profile for admin user
         sudo nextcloud.occ user:setting $NCADMIN settings email "$NCADMINMAIL"
-## Set Email
+# set Email server
 	sudo nextcloud.occ config:system:set mail_from_address --value="noreply-cloud" ;
 	sudo nextcloud.occ config:system:set mail_smtpmode --value="smtp" ;
 	sudo nextcloud.occ config:system:set mail_sendmailmode --value="smtp" ;
@@ -63,7 +62,7 @@ NCREGION="GB"
 	sudo nextcloud.occ config:system:set mail_smtppassword --value="smtpcredentials" ;
 	sudo nextcloud.occ config:system:set mail_smtpsecure --value="ssl" ;
 ##############################################################
-### Install Nextcloud Office and Collabora CODE built in ###
+### Install Nextcloud Office and Collabora CODE built in
 ##############################################################
 # Set overwrite-cli
 	sudo nextcloud.occ config:system:set overwrite.cli.url --value="https://$NCTLD"
@@ -79,8 +78,9 @@ NCREGION="GB"
 	sudo nextcloud.occ app:enable richdocuments ;
 # 6. Enable CODE
 	sudo nextcloud.occ app:enable richdocumentscode ;
-
-
+##############################################################
+### cleanup and complete installation
+##############################################################
 # truncate logs
 	sudo truncate -s 0 /var/snap/nextcloud/current/logs/nextcloud.log
 # restart Nextcloud snap
