@@ -64,6 +64,8 @@ NCREGION="GB"
 ##############################################################
 ### Install Nextcloud Office and Collabora CODE built in
 ##############################################################
+# Install missing packages on host
+	sudo apt install fontconfig glibc-source
 # Set overwrite-cli
 	sudo nextcloud.occ config:system:set overwrite.cli.url --value="https://$NCTLD"
 # 1. Disable CODE
