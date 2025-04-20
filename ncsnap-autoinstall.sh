@@ -2,7 +2,7 @@
 #################################################################################
   # Setup Nextcloud snap auto install  -scubamuc- https://scubamuc.github.io/ #
 #################################################################################
-# This script assumes you are running your test instance behind a reverse proxy  
+# This script assumes you are running Nextcloud snap behind a reverse proxy  
 # managing encryption
 #################################################################################
              #  Nextcloud snap auto install, Variables #
