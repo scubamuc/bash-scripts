@@ -6,11 +6,15 @@
 # managing encryption
 #################################################################################
              #  Nextcloud snap auto install, Variables #
-NCTLD=cloud.mydomain.tld            
-NCADMIN=admin 
-NCADMINPW=password
-NCADMINMAIL=admin@mydomain.tld
-RPROXYIP=192.168.2.xxx
+NCTLD="cloud.mydomain.tld"            
+NCADMIN="admin" 
+NCADMINPW="adminpassword"
+NCADMINMAIL="admin@mydomain.tld"
+RPROXYIP="192.168.2.xxx"
+NCLANGUAGE="en"
+NCLOCALE="en"
+NCREGION="GB"
+
 ##############################################################
 # remove existing Nextcloud snap
 	sudo snap remove nextcloud ;
@@ -29,10 +33,10 @@ RPROXYIP=192.168.2.xxx
 # backup working config.php
 	sudo cp /var/snap/nextcloud/current/nextcloud/config/config.php /var/snap/nextcloud/current/nextcloud/config/config.php.bak ;
 # set language to en
-        sudo nextcloud.occ config:system:set default_language --value="en" ;
-        sudo nextcloud.occ config:system:set force_language --value="en" ;
+        sudo nextcloud.occ config:system:set default_language --value="$NCLANGUAGE" ;
+        sudo nextcloud.occ config:system:set force_language --value="$NCLANGUAGE" ;
 # set default phone region
-	sudo nextcloud.occ config:system:set default_phone_region --value="GB" ;
+	sudo nextcloud.occ config:system:set default_phone_region --value="$NCREGION" ;
 # set http compression
 	sudo snap set nextcloud http.compression=true ;
 # set maintenance windows
