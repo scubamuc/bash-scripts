@@ -31,21 +31,19 @@ NCREGION="GB"
 ##############################################################
 # backup working config.php
 	sudo cp /var/snap/nextcloud/current/nextcloud/config/config.php /var/snap/nextcloud/current/nextcloud/config/config.php.bak ;
-# set language to en
+# set language 
         sudo nextcloud.occ config:system:set default_language --value="$NCLANGUAGE" ;
         sudo nextcloud.occ config:system:set force_language --value="$NCLANGUAGE" ;
 # set default phone region
 	sudo nextcloud.occ config:system:set default_phone_region --value="$NCREGION" ;
 # set http compression
 	sudo snap set nextcloud http.compression=true ;
-# set maintenance windows
+# set default maintenance window
 	sudo nextcloud.occ config:system:set maintenance_window_start --value="1" ;
 # set trusted proxies
 	sudo nextcloud.occ config:system:set trusted_proxies 0 --value="$RPROXYIP" ;
 # set trusted domains
 	sudo nextcloud.occ config:system:set trusted_domains 0 --value="$NCTLD" ;
-	sudo nextcloud.occ config:system:set trusted_domains 1 --value="x.$NCTLD" ;
-	sudo nextcloud.occ config:system:set trusted_domains 2 --value="y.$NCTLD" ;
 # set overwritehostprotocol
 	sudo nextcloud.occ config:system:set overwriteprotocol --value="https" ;
 # set mail address in user profile for admin user
