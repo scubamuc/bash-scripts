@@ -15,13 +15,13 @@ NCLANGUAGE="en"
 NCLOCALE="en"
 NCREGION="GB"
 ##############################################################
-# remove existing Nextcloud snap
+# Remove existing Nextcloud snap
 	sudo snap remove nextcloud ;
-# install latest Nextcloud snap
+# Install latest Nextcloud snap
 	sudo snap install nextcloud ;
-# setup admin-user
+# Setup admin-user
         sudo nextcloud.manual-install $NCADMIN $NCADMINPW ;
-# install recommended apps
+# Install recommended apps
         sudo nextcloud.occ app:enable calendar ;
         sudo nextcloud.occ app:enable contacts ;
 	sudo nextcloud.occ app:enable mail ;
@@ -29,26 +29,26 @@ NCREGION="GB"
         sudo nextcloud.occ app:enable notes ;
         sudo nextcloud.occ app:enable spreed ; 
 ##############################################################
-# backup working config.php
+# Backup working config.php
 	sudo cp /var/snap/nextcloud/current/nextcloud/config/config.php /var/snap/nextcloud/current/nextcloud/config/config.php.bak ;
-# set language 
+# Set language 
         sudo nextcloud.occ config:system:set default_language --value="$NCLANGUAGE" ;
         sudo nextcloud.occ config:system:set force_language --value="$NCLANGUAGE" ;
-# set default phone region
+# Set default phone region
 	sudo nextcloud.occ config:system:set default_phone_region --value="$NCREGION" ;
-# set http compression
+# Set http compression
 	sudo snap set nextcloud http.compression=true ;
-# set default maintenance window
+# Set default maintenance window
 	sudo nextcloud.occ config:system:set maintenance_window_start --value="1" ;
-# set trusted proxies
+# Set trusted proxies
 	sudo nextcloud.occ config:system:set trusted_proxies 0 --value="$RPROXYIP" ;
-# set trusted domains
+# Set trusted domains
 	sudo nextcloud.occ config:system:set trusted_domains 0 --value="$NCTLD" ;
-# set overwritehostprotocol
+# Set overwritehostprotocol
 	sudo nextcloud.occ config:system:set overwriteprotocol --value="https" ;
-# set mail address in user profile for admin user
+# Set mail address in user profile for admin user
         sudo nextcloud.occ user:setting $NCADMIN settings email "$NCADMINMAIL"
-# set Email server
+# Set Email server
 	sudo nextcloud.occ config:system:set mail_from_address --value="noreply-cloud" ;
 	sudo nextcloud.occ config:system:set mail_smtpmode --value="smtp" ;
 	sudo nextcloud.occ config:system:set mail_sendmailmode --value="smtp" ;
@@ -81,8 +81,8 @@ NCREGION="GB"
 ##############################################################
 ### cleanup and complete installation
 ##############################################################
-# truncate logs
+# Truncate logs
 	sudo truncate -s 0 /var/snap/nextcloud/current/logs/nextcloud.log
-# restart Nextcloud snap
+# Restart Nextcloud snap
 	sudo snap restart nextcloud
 exit
