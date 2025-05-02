@@ -15,5 +15,5 @@ NCADBLINK="https://$NCTLD/remote.php/dav/addressbooks/users/$NCUSER/$NCADBNAME/?
     curl -L -J -O -u "$NCUSER:$NCUSERPWD" "$NCADBLINK" --create-dirs -o "./$(basename "$url")"
 done
 
-echo "Download abgeschlossen."
+echo "Download complete."
 ```
