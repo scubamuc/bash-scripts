@@ -3,19 +3,11 @@
 # Auto-contacts-export  -scubamuc- https://scubamuc.github.io/                  #
 #################################################################################
 # Nextcloud snap automatic Adressbook export
+## create cronjob to backup cotacts wekly on Saturday at 22:00
+##  0 22 * * 6 su - <$USER> /home/$USER/bin/cloudsync-contacts.sh
 #################################################################################
-             #  Nextcloud snap contacts export, Variables #
-NCTLD="cloud.mydomain.tld" # Nextcloud TLD
-NCUSER="username" # Username
-NCUSERPWD="userpassword" #Userpassword
-NCADBNAME="addressbookname" #Addressbook name
-DWNLDPATH="/home/user/contactsbackup"
-NCADBLINK="https://$NCTLD/remote.php/dav/addressbooks/users/$NCUSER/$NCADBNAME/?export" 
-NCADBFULLLINK="https://cloud.example.com/remote.php/dav/addressbooks/users/username/contacts/?export"  #optional Addressbook link
-##############################################################
-    echo "Downloading from $NCADBLINK..."
-    curl -L -J -O -u "$NCUSER:$NCUSERPWD" "$NCADBLINK" --create-dirs -o "$DWNLDPATH"
-done
+             #  Nextcloud contacts export #
+ cd /home/$USER/Backup/contacts/ ; ## target directory for contacts export 
+ curl -L -J -O -u "<user>:<passsword>" "https://cloud.domain.tld/remote.php/dav/addressbooks/users/<nextcloud-user>/<addressbookname>/?export" 
 
-echo "Download complete."
 ```
