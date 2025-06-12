@@ -78,8 +78,8 @@ echo '       System services and messages!             '
 echo ''
 	echo -ne "      |   System up since:	"; uptime -p ; #check uptime
         echo -ne "      |         Last boot:	"; last reboot -F | head -1 | awk '{print $5,$6,$7,$8,$9}' ; # Check last reboot
-        echo     "      |    System updates?	" $CheckUpdates ; # check for system upgrades
-        echo -ne "      |   Reboot required?	" $CheckReboot ; # check if reboot is required
+        echo     "      |    System updates?	" CheckUpdates ; # check for system upgrades
+        echo -ne "      |   Reboot required?	" CheckReboot ; # check if reboot is required
 echo ''
 echo ''
 echo '       ==================================   '
