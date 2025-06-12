@@ -80,7 +80,7 @@ echo ''
         echo -ne "	    X11VNC Server: "; ps -C x11vnc >/dev/null && echo "läuft!" || echo "gestoppt!"
 	echo -ne "	System Läuft seit: "; uptime -p ; #check wie lange läuft System schon
 	echo -ne "	 Letzter Neustart: "; last reboot -F | head -1 | awk '{print $5,$6,$7,$8,$9}' ; #check letzter neustart
-	echo -ne "	  System Neustart? "; $CheckReboot
+	echo -ne "	  System Neustart? "; CheckReboot
 echo ''
 echo '   =========================================   '
 echo ''
