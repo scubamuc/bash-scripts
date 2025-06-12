@@ -24,7 +24,7 @@ EXTIP=$(curl ifconfig.me) ## External IP
 ## Check ob neustart notwendig ##
 CheckReboot()
         {
-        	sudo /usr/lib/update-notifier/update-motd-reboot-required
+                [ -f /var/run/reboot-required ] && echo "Ja, Neustart empfohlen" || echo "Nein, nicht nötig"
         }
 
 ## Check ob Updates verfügbar ##
