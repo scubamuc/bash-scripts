@@ -24,7 +24,7 @@ EXTIP=$(curl ifconfig.me) ## External IP
 ## Check ob neustart notwendig ##
 CheckReboot()
         {
-                [ -f /var/run/reboot-required ] && echo "Ja, Neustart empfohlen" || echo "Nein, nicht nötig"
+                [ -f /var/run/reboot-required ] && echo "Neustart empfohlen" || echo "Neustart unnötig"
         }
 
 ## Check ob Updates verfügbar ##
