@@ -25,7 +25,7 @@ IPLAN=hostname -I ## zeigt lokale LAN IP
 ## Check ob neustart notwendig ##
 CheckReboot()
 	{
-	[ -f /var/run/reboot-required ] && echo "Neustart erforderlich" || echo "Nicht erforderich"
+	[ -f /var/run/reboot-required ] && echo "Neustart erforderlich!" || echo "Neustart unnötog"
 	}
 
 ## Check ob Updates verfügbar ##
