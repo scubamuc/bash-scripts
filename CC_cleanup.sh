@@ -14,7 +14,7 @@ LOG="/home/$USER/logs/cleanup.log"  ## Logdatei
 OLDLOG="/home/$USER/logs/cleanup.old"  ## Logdatei
 DATUM=`date +"%F"` ## Datumvariable
 ZEIT=`date +"%T"`  ## Zeitvariable
-ZIEL="/media/Data/data/__groupfolders/1"  ## Zielverzeichnis
+ZIEL="/../../data/__groupfolders/1"  ## Zielverzeichnis
 QUELLE="/home/$USER/Pfad" ## Quelldatei
 ##############################################################
 # Script Beginn
