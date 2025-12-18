@@ -25,7 +25,7 @@ EXTIP=$(curl ifconfig.me)
 ## Check if reboot is required ##
 CheckReboot()
         {
-        	[ -f /var/run/reboot-required ] && echo "Reboot required" || echo "No reboot needed"
+        	[ -f /var/run/reboot-required ] && echo "Required" || echo "Not required"
         }
 
 
