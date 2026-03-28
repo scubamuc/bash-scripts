@@ -4,7 +4,7 @@
 #################################################################################
 # Nextcloud snap automatic Adressbook export
 ## create cronjob to backup cotacts wekly on Saturday at 22:00
-##  0 22 * * 6 su - <$USER> /home/$USER/bin/cloudsync-contacts.sh
+##  0 22 * * 6 su - <$USER> /home/$USER/bin/auto-contacts-export.sh
 #################################################################################
              #  Nextcloud contacts export #
  
