@@ -8,6 +8,7 @@
 #################################################################################
              #  Nextcloud contacts export #
  
- curl -L -J -u "<USER>:<PASSWORD>" "https://cloud.domain.tld/remote.php/dav/addressbooks/users/<USER>/<addressbookname>/?export" --output /home/$USER/Backup/contacts/
+ curl -L -J -u "<USER>:<PASSWORD>" "https://cloud.domain.tld/remote.php/dav/addressbooks/users/<USER>/<addressbookname>/?export" 
+ --output /home/$USER/Backup/contacts-backup$(date '+%Y%m%d_%T').vcf
 
 ```
