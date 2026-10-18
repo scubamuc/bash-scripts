@@ -20,12 +20,14 @@ echo '#############################################################'
 	sudo apt-get -y autoremove --purge;
 	sudo apt-get -y autoclean;
 	sudo apt-get -y clean;
-#	rm -rf ~/.cache/chromium/* ; # bereigige Chromium caches
-#	rm -rf ~/.mozilla/firefox/*/Cache ; # bereigige Firefox caches
-#	rm -rf ~/.mozilla/firefox/'Crash Reports'/* ; # bereigige Firefox caches
-#	rm -rf ~/.cache/mozilla/firefox/* ; # bereigige Firefox caches
 echo '#############################################################'
 echo '#               System ist aktuell!                         #'
 echo '#############################################################'
+echo ""
+echo 'System aktualisiert, prüfe ob Neustart empfohlen!' 
+echo ""
+[ -f /var/run/reboot-required ] && echo "Neustart empfohlen!" || echo "Neustart nicht nötig!"
+echo ""
+
 	notify-send 'System ist aktuell!' #ausschalten für cronjob!
 	exit
