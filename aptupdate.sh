@@ -26,6 +26,5 @@ echo '#############################################################'
 echo ""
 echo -ne "System aktualisiert, prüfe ob Neustart empfohlen?    --> "; [ -f /var/run/reboot-required ] && echo "Neustart empfohlen!" || echo "Neustart nicht nötig!"
 echo ""
-
 	notify-send 'System ist aktuell!' #ausschalten für cronjob!
 	exit
