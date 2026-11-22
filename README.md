@@ -10,10 +10,9 @@ While this is absolutely true, my scripts do what I expect them to do.
 > [!WARNING]
 > ⚠ Use scripts **at own risk**. Adapt them to your needs, but be careful and double check!
 
-Notice how almost every line is commented? That's because I like to know what is happening and if I don't write it down I'm bound to forget! 
-Its all about doing the basics...
+Consider these scripts as **examples**. Notice how almost every line is commented? That's because I like to know what is happening and if I don't write it down I'm bound to forget! Its all about doing the basics...
 
-If you find what you need, thats great and you're welcome 🤿 👌
+If you find what you need, that's great and you're welcome 🤿👌
 
 > [!NOTE]
 > If you find any errors or typo's, you can keep 'em 🤣
